@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Contact List
+  table
+    thead
+      tr
+        th First Name
+        th Last Name
+        th Email
+        th View Details
+    tbody
+      each contact in contacts
+        tr
+          td= contact.firstName
+          td= contact.lastName
+          td= contact.email
+          td
+            a(href=`/contacts/${contact.id}`) Details
